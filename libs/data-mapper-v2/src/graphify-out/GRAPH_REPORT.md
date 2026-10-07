@@ -1,16 +1,16 @@
-# Graph Report - src  (2026-08-26)
+# Graph Report - src  (2026-10-07)
 
 ## Corpus Check
 - 143 files · ~77,576 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1292 nodes · 3828 edges · 71 communities (63 shown, 8 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 74 edges (avg confidence: 0.84)
+- 1473 nodes · 4683 edges · 76 communities (67 shown, 9 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 74 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5c7453c9`
+- Built from commit: `04df5b5c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,73 +21,80 @@
 - images/FunctionIcons/DataType16Icons.tsx
 - images/FunctionIcons/DataType24Icons.tsx
 - components/functionConfigurationMenu/inputTab/inputTab.tsx
-- core/services/dataMapperApiService/index.ts
-- core/state/Store.ts
+- core/state/PanelSlice.ts
+- src/core/state/Store.ts
 - Schema.Utils.ts
 - core/state/DataMapSlice.ts
 - DataMap.Utils.ts
 - TrieTree
-- components/common/selector/FileSelector.tsx
+- components/common/fileDropdownTree/FileDropdownTree.tsx
 - MapChecker.Utils.ts
-- components/schema/useSchema.ts
-- src/components/functionIcon/FunctionIcon.tsx
-- core/index.ts
+- core/state/Store.ts
+- src/components/schema/SchemaPanel.tsx
+- components/test/TestPanel.tsx
 - Edge.Utils.ts
 - Function.Utils.ts
 - components/schema/SchemaPanel.tsx
-- components/functionList/FunctionList.tsx
+- isFunctionNode
 - components/canvas/ReactFlow.tsx
-- MapDefinitionDeserializer.ts
-- src/images/FunctionIcons/FunctionIcons.tsx
+- src/core/state/__test__/DataMapSlice.spec.ts
+- Icon.Utils.tsx
 - ThemeConect.ts
-- CustomValue.Utils.ts
+- src/components/functionConfigurationMenu/inputDropdown/InputDropdown.tsx
 - components/common/reactflow/FunctionNode.tsx
 - ReactFlow.Util.ts
-- src/components/canvas/useReactflowStates.ts
+- components/canvas/useReactflowStates.ts
 - src/core/state/selectors/selectors.ts
-- components/functionConfigurationMenu/functionConfigurationPopover.tsx
-- components/codeView/CodeViewPanel.tsx
+- models/index.ts
+- RootState
 - src/components/functionsPanel/FunctionPanel.tsx
 - src/core/state/DataMapSlice.ts
 - src/components/functionConfigurationMenu/inputTab/inputTab.tsx
-- src/core/state/Store.ts
-- Icon.Utils.tsx
-- FunctionData
+- DataMapperDesignerProvider.tsx
+- ref_fluentui_react_icons
+- src/mapHandling/__test__/MapDefinitionSerializer.spec.ts
 - intl-test-helper.tsx
 - utils/reactFlowTesting/NodeInspector.tsx
-- ReactFlow.ts
+- DataMapDataProvider.tsx
 - Svg.d.ts
-- DataMapperDesigner.tsx
-- Connection.Utils.ts
+- IDataMapperFileService
+- isSchemaNodeExtended
 - src/components/canvas/ReactFlow.tsx
 - src/images/FunctionIcons/DataType16Icons.tsx
 - src/images/FunctionIcons/DataType24Icons.tsx
-- applyConnectionValue
-- src/components/schema/SchemaPanel.tsx
-- src/components/schema/useSchema.ts
+- Connection.Utils.ts
+- src/components/schema/SchemaPanelBody.tsx
+- src/components/schema/tree/SchemaTreeNode.tsx
 - TrieTree
-- src/components/functionList/FunctionList.tsx
-- RootState
-- core/state/PanelSlice.ts
-- isEmptyConnection
-- src/core/services/dataMapperApiService/index.ts
+- FunctionData
+- ref_fluentui_react_components
+- components/common/selector/__test__/FileSelector.spec.tsx
+- src/components/functionConfigurationMenu/functionConfigurationPopover.tsx
+- ext_logic_apps_shared_src_index_ts
+- src/core/state/ModalSlice.ts
+- DataMapperDesigner.tsx
+- core/index.ts
 - src/components/commandBar/EditorCommandBar.tsx
-- src/core/state/PanelSlice.ts
-- DataMapperApiService
-- DataMapperApiService
 - components/commandBar/EditorCommandBar.tsx
-- src/components/test/TestPanel.tsx
+- ref_react
 - src/components/common/reactflow/FunctionNode.tsx
 - src/components/common/selector/__test__/FileSelector.spec.tsx
-- IDataMapperApiService
-- MapDefinition.Utils.ts
-- src/utils/reactFlowTesting/NodeInspector.tsx
+- src/core/state/FunctionSlice.ts
+- MapMetadataSerializer.ts
+- ref_xyflow_react
+- src/core/state/ErrorsSlice.ts
+- getConnectedTargetSchemaNodes
+- ui/hooks/useAutoLayout.ts
+- images/FunctionIcons/CategoryIcons.tsx
+- src/core/services/dataMapperFileService/dataMapperFileService.ts
+- components/functionsPanel/FunctionPanel.tsx
+- core/state/AppSlice.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `FunctionData` - 60 edges
 2. `isSchemaNodeExtended()` - 43 edges
-3. `ConnectionDictionary` - 38 edges
-4. `MapDefinitionDeserializer` - 37 edges
+3. `MapDefinitionDeserializer` - 38 edges
+4. `ConnectionDictionary` - 38 edges
 5. `applyConnectionValue()` - 36 edges
 6. `isNodeConnection()` - 32 edges
 7. `RootState` - 31 edges
@@ -98,27 +105,27 @@
 ## Surprising Connections (you probably didn't know these)
 - `InitialDataMapAction` --references--> `ConnectionDictionary`  [EXTRACTED]
   core/state/DataMapSlice.ts → src/models/Connection.ts
+- `ExtendedRenderOptions` --references--> `RootState`  [EXTRACTED]
+  src/__test__/redux-test-helper-dm.tsx → core/state/Store.ts
+- `SetConnectionInputAction` --references--> `InputConnection`  [EXTRACTED]
+  core/state/DataMapSlice.ts → src/models/Connection.ts
 - `FunctionListItemProps` --references--> `FunctionData`  [EXTRACTED]
   components/functionList/FunctionListItem.tsx → src/models/Function.ts
 - `InputDropdownProps` --references--> `FunctionData`  [EXTRACTED]
   components/functionConfigurationMenu/inputDropdown/InputDropdown.tsx → src/models/Function.ts
-- `FunctionState` --references--> `FunctionData`  [EXTRACTED]
-  core/state/FunctionSlice.ts → src/models/Function.ts
-- `FunctionIconProps` --references--> `FunctionCategory`  [EXTRACTED]
-  components/functionIcon/FunctionIcon.tsx → src/models/Function.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (71 total, 8 thin omitted)
+## Communities (76 total, 9 thin omitted)
 
 ### Community 0 - "MapDefinitionDeserializer"
 Cohesion: 0.13
-Nodes (9): DataProviderInner(), MapDefinitionDeserializer, createSchemaNodeOrFunction(), getSourceNode(), separateFunctions(), addSourceReactFlowPrefix(), createReactFlowFunctionKey(), findNodeForKey() (+1 more)
+Nodes (11): DataMapDataProvider(), DataProviderInner(), MapDefinitionDeserializer, createSchemaNodeOrFunction(), getSourceNode(), separateFunctions(), DeserializationError, addSourceReactFlowPrefix() (+3 more)
 
 ### Community 1 - "MapDefinitionSerializer.ts"
-Cohesion: 0.15
-Nodes (29): addConditionalToNewPathItems(), addLoopingForToNewPathItems(), applyValueAtPath(), createNewPathItems(), createSourcePath(), createYamlFromMap(), findKeyInMap(), generateMapDefinitionBody() (+21 more)
+Cohesion: 0.13
+Nodes (28): addConditionalToNewPathItems(), applyValueAtPath(), convertToArray(), convertToMapDefinition(), createNewPathItems(), createSourcePath(), createYamlFromMap(), findKeyInMap() (+20 more)
 
 ### Community 2 - "images/FunctionIcons/FunctionIcons.tsx"
 Cohesion: 0.05
@@ -134,147 +141,143 @@ Nodes (12): Any24Filled, Any24Regular, Array24Filled, Array24Regular, Binary24Fi
 
 ### Community 5 - "components/functionConfigurationMenu/inputTab/inputTab.tsx"
 Cohesion: 0.18
-Nodes (13): InputDropdown(), InputDropdownProps, InputOptionProps, useStyles, InputCustomInfoLabel(), CommonProps, CustomListItem(), CustomListItemProps (+5 more)
+Nodes (14): InputDropdown(), InputOptionProps, useStyles, InputCustomInfoLabel(), CommonProps, CustomListItem(), CustomListItemProps, InputListProps (+6 more)
 
-### Community 6 - "core/services/dataMapperApiService/index.ts"
-Cohesion: 0.23
-Nodes (9): DataMapperApiServiceOptions, DmErrorResponse, dataMapperApiVersions, defaultDataMapperApiServiceOptions, GenerateXsltResponse, IDataMapperApiService, InitDataMapperApiService(), exampleTree (+1 more)
+### Community 6 - "core/state/PanelSlice.ts"
+Cohesion: 0.09
+Nodes (21): DataMapperApiService, DataMapperApiServiceOptions, DmErrorResponse, dataMapperApiVersions, defaultDataMapperApiServiceOptions, GenerateXsltResponse, IDataMapperApiService, InitDataMapperApiService() (+13 more)
 
-### Community 7 - "core/state/Store.ts"
-Cohesion: 0.14
-Nodes (15): AppStore, XsltFilePickerProps, appSlice, AppState, initialState, functionSlice, FunctionState, initialFunctionState (+7 more)
+### Community 7 - "src/core/state/Store.ts"
+Cohesion: 0.17
+Nodes (8): AppStore, includedActionsForUndo, store, initialSchemaState, schemaSlice, SchemaState, AppStore, ExtendedRenderOptions
 
 ### Community 8 - "Schema.Utils.ts"
-Cohesion: 0.16
+Cohesion: 0.13
 Nodes (12): convertSchemaNodeToSchemaNodeExtended(), convertSchemaToSchemaExtended(), deepestNode(), getFileNameAndPath(), maxProperties(), nodeCount(), NodeScrollDirectionType, parsePropertiesIntoNodeProperties() (+4 more)
 
 ### Community 9 - "core/state/DataMapSlice.ts"
-Cohesion: 0.09
-Nodes (28): DataMapOperationState, convertConnectionShorthandToId(), generateFunctionConnectionMetadata(), generateMapMetadata(), FunctionDictionary, ComponentState, DataMapOperationState, dataMapSlice (+20 more)
+Cohesion: 0.11
+Nodes (17): ComponentState, ConnectionAction, dataMapSlice, DataMapState, DeleteConnectionAction, deleteParentRepeatingConnections(), Draft2, emptyPristineState (+9 more)
 
 ### Community 10 - "DataMap.Utils.ts"
-Cohesion: 0.11
-Nodes (25): directAccessPseudoFunctionKey, ifPseudoFunctionKey, indexPseudoFunctionKey, indexed, addParentConnectionForRepeatingElementsNested(), amendSourceKeyForDirectAccessIfNeeded(), DSeparators, getDestinationKey() (+17 more)
+Cohesion: 0.08
+Nodes (36): mapDefinitionVersion, mapNodeParams, reservedMapDefinitionKeys, reservedMapDefinitionKeysArray, reservedMapNodeParamsArray, ConditionalMetadata, getLoopTargetNode(), getLoopTargetNodeWithJson() (+28 more)
 
 ### Community 11 - "TrieTree"
 Cohesion: 0.15
 Nodes (3): TrieTree, TrieTreeNode, AppState
 
-### Community 12 - "components/common/selector/FileSelector.tsx"
-Cohesion: 0.20
-Nodes (11): useStyles, DataMapperFileService(), FileDropdownTree(), FileDropdownTreeProps, XsltFilePicker(), FileSelectorProps, SchemaFileSelector(), U (+3 more)
+### Community 12 - "components/common/fileDropdownTree/FileDropdownTree.tsx"
+Cohesion: 0.48
+Nodes (4): useStyles, FileDropdownTree(), FileDropdownTreeProps, MockFileService
 
 ### Community 13 - "MapChecker.Utils.ts"
-Cohesion: 0.08
-Nodes (40): MapCheckerItem(), MapCheckerItemProps, MapCheckerPanel(), useMapCheckerItemStyles, useStyles, errorsSlice, ErrorsState, initialFunctionState (+32 more)
+Cohesion: 0.13
+Nodes (17): MapCheckerItemProps, MapCheckerItemProps, MapCheckerPanel(), useStyles, nodeHasSourceNodeEventually(), invalidFunctions(), isFunctionData(), IntlMessage (+9 more)
 
-### Community 14 - "components/schema/useSchema.ts"
-Cohesion: 0.24
-Nodes (13): HandleResponseProps, useSchemaProps, SchemaTree(), SchemaTreeProps, SchemaTreeNode(), SchemaTreeNodeProps, TypeAnnotation(), SchemaTreeNodeHandle() (+5 more)
+### Community 14 - "core/state/Store.ts"
+Cohesion: 0.22
+Nodes (16): HandleResponseProps, useSchema(), useSchemaProps, AppDispatch, includedActionsForUndo, SchemaTree(), SchemaTreeProps, SchemaTreeNode() (+8 more)
 
-### Community 15 - "src/components/functionIcon/FunctionIcon.tsx"
-Cohesion: 0.43
-Nodes (6): FunctionIcon(), FunctionIconProps, FunctionIcon(), FunctionIconProps, iconForFunction(), iconForFunctionCategory()
+### Community 15 - "src/components/schema/SchemaPanel.tsx"
+Cohesion: 0.11
+Nodes (14): ReactFlowStatesProps, schemaFileQuerySettings, usePanelBodyStyles, usePanelStyles, useStyles, AppDispatch, autoLayout(), Direction (+6 more)
 
-### Community 16 - "core/index.ts"
-Cohesion: 0.16
-Nodes (14): getFunctions(), DataMapperApiServiceInstance(), pseudoFunctions, generateDataMapXslt(), testDataMap(), getFunctions(), getSelectedSchema(), useStyles (+6 more)
+### Community 16 - "components/test/TestPanel.tsx"
+Cohesion: 0.20
+Nodes (12): Panel(), PanelProps, PanelXButton(), PanelXButtonProps, useStyles, useStyles, TestPanel(), TestPanelProps (+4 more)
 
 ### Community 17 - "Edge.Utils.ts"
-Cohesion: 0.19
+Cohesion: 0.17
 Nodes (17): BoundingBox, convertCanvasToGridPoint(), convertGridToCanvasPoint(), findPath(), generateBoundingBoxes(), generatePathfindingGrid(), getLinearDistance(), getLineStretchLength() (+9 more)
 
 ### Community 18 - "Function.Utils.ts"
-Cohesion: 0.13
-Nodes (17): InputTextbox(), InputTextboxProps, collectionBranding, conversionBranding, customBranding, dateTimeBranding, FunctionGroupBranding, logicalBranding (+9 more)
+Cohesion: 0.10
+Nodes (21): InputTextbox(), InputTextboxProps, collectionBranding, conversionBranding, customBranding, dateTimeBranding, FunctionGroupBranding, logicalBranding (+13 more)
 
 ### Community 19 - "components/schema/SchemaPanel.tsx"
-Cohesion: 0.25
-Nodes (13): FileWithVsCodePath, SchemaFile, SchemaPanelNodeReactFlowDataProps, ConfigPanelProps, schemaFileQuerySettings, SchemaPanel(), SchemaPanelBody(), SchemaPanelBodyProps (+5 more)
+Cohesion: 0.17
+Nodes (17): ConfigPanelProps, DataMapperFileService(), FileWithVsCodePath, SchemaFile, SchemaPanelNodeReactFlowDataProps, ConfigPanelProps, schemaFileQuerySettings, SchemaPanel() (+9 more)
 
-### Community 20 - "components/functionList/FunctionList.tsx"
-Cohesion: 0.25
-Nodes (11): FunctionDataTreeItem, FunctionList(), FunctionListProps, fuseFunctionSearchOptions, loopFuseFunctionSearchOptions, FunctionListHeader(), FunctionListHeaderProps, DropResult (+3 more)
+### Community 20 - "isFunctionNode"
+Cohesion: 0.22
+Nodes (14): getCoordinatesForHandle(), MapCheckerItem(), useMapCheckerItemStyles, NodeIds, SchemaTreeDataProps, getCoordinatesForHandle(), MapCheckerItem(), useMapCheckerItemStyles (+6 more)
 
 ### Community 21 - "components/canvas/ReactFlow.tsx"
-Cohesion: 0.12
-Nodes (21): EdgePopOver(), EdgePopOverProps, DMReactFlowProps, edgeTypes, nodeTypes, ReactFlowWrapper(), reactFlowStyle, useStyles (+13 more)
+Cohesion: 0.15
+Nodes (19): EdgePopOver(), EdgePopOverProps, DMReactFlowProps, edgeTypes, nodeTypes, ReactFlowWrapper(), reactFlowStyle, useStyles (+11 more)
 
-### Community 22 - "MapDefinitionDeserializer.ts"
-Cohesion: 0.17
-Nodes (13): mapDefinitionVersion, mapNodeParams, reservedMapDefinitionKeysArray, reservedMapNodeParamsArray, targetPrefix, ConditionalMetadata, getLoopTargetNode(), getLoopTargetNodeWithJson() (+5 more)
+### Community 22 - "src/core/state/__test__/DataMapSlice.spec.ts"
+Cohesion: 0.13
+Nodes (3): connectionDict, functionData, functionDict
 
-### Community 23 - "src/images/FunctionIcons/FunctionIcons.tsx"
-Cohesion: 0.05
-Nodes (20): AbsoluteValue32Regular, AngleIcon, CeilingValue32Regular, Count32Regular, Divide32Regular, EPowerX32Regular, FloorValue32Regular, GreaterThan32Regular (+12 more)
+### Community 23 - "Icon.Utils.tsx"
+Cohesion: 0.08
+Nodes (25): String24Regular, AbsoluteValue32Regular, AngleIcon, CeilingValue32Regular, Count32Regular, Divide32Regular, EPowerX32Regular, FloorValue32Regular (+17 more)
 
 ### Community 24 - "ThemeConect.ts"
 Cohesion: 0.18
 Nodes (9): ConnectionLineComponent(), FunctionCategoryColorToken, customDarkTokens, customTokens, DataMapperTheme, extendedWebDarkTheme, extendedWebLightTheme, fnColors (+1 more)
 
-### Community 25 - "CustomValue.Utils.ts"
-Cohesion: 0.73
-Nodes (3): checkIfValueNeedsQuotes(), quoteSelectedCustomValue(), quoteString()
+### Community 25 - "src/components/functionConfigurationMenu/inputDropdown/InputDropdown.tsx"
+Cohesion: 0.19
+Nodes (10): InputDropdown(), InputOptionProps, useStyles, UnboundedInput, isValidConnectionByType(), isValidCustomValueByType(), checkIfValueNeedsQuotes(), quoteSelectedCustomValue() (+2 more)
 
 ### Community 26 - "components/common/reactflow/FunctionNode.tsx"
 Cohesion: 0.31
 Nodes (8): CanvasNode(), CanvasNodeProps, CardProps, FunctionCardProps, FunctionNode(), useStyles, useHoverFunctionNode(), useSelectedNode()
 
 ### Community 27 - "ReactFlow.Util.ts"
-Cohesion: 0.13
-Nodes (20): getCoordinatesForHandle(), functionPrefix, NodeIds, ReactFlowEdgeType, ReactFlowNodeType, sourcePrefix, getCoordinatesForHandle(), useEdgePath() (+12 more)
+Cohesion: 0.12
+Nodes (17): functionPrefix, ReactFlowEdgeType, ReactFlowNodeType, sourcePrefix, targetPrefix, generateInputHandleId(), ContainerLayoutNode, createReactFlowEdgeLabels() (+9 more)
 
-### Community 28 - "src/components/canvas/useReactflowStates.ts"
-Cohesion: 0.44
-Nodes (7): ReactFlowStatesProps, useReactFlowStates(), ReactFlowStatesProps, useReactFlowStates(), createEdgeId(), getFunctionNode(), convertWholeDataMapToLayoutTree()
+### Community 28 - "components/canvas/useReactflowStates.ts"
+Cohesion: 0.52
+Nodes (6): ReactFlowStatesProps, useReactFlowStates(), useReactFlowStates(), createEdgeId(), getFunctionNode(), convertWholeDataMapToLayoutTree()
 
 ### Community 29 - "src/core/state/selectors/selectors.ts"
-Cohesion: 0.33
-Nodes (8): ConnectedEdge(), useEdgePath(), useHoverEdge(), useHoverNode(), useSelectedEdge(), useSelectedIntermediateEdge(), useHoverNode(), getReactFlowNodeId()
+Cohesion: 0.43
+Nodes (5): ConnectedEdge(), useEdgePath(), useHoverEdge(), useSelectedEdge(), useSelectedIntermediateEdge()
 
-### Community 30 - "components/functionConfigurationMenu/functionConfigurationPopover.tsx"
-Cohesion: 0.36
-Nodes (7): DetailsTabContents(), FunctionConfigurationPopover(), FunctionConfigurationPopoverProps, TabTypes, useStyles, OutputTabContents(), isFileDropdownFunction()
+### Community 30 - "models/index.ts"
+Cohesion: 0.23
+Nodes (12): validateAndCreateConnectionInput(), validateAndCreateConnectionOutput(), DetailsTabContents(), FunctionConfigurationPopover(), FunctionConfigurationPopoverProps, TabTypes, useStyles, validateAndCreateConnectionInput() (+4 more)
 
-### Community 31 - "components/codeView/CodeViewPanel.tsx"
-Cohesion: 0.46
-Nodes (5): CodeViewPanel(), CodeViewPanelProps, CodeViewPanelBody(), CodeViewPanelBodyProps, useStyles
+### Community 31 - "RootState"
+Cohesion: 0.42
+Nodes (6): CodeViewPanel(), CodeViewPanelProps, CodeViewPanelBody(), CodeViewPanelBodyProps, useStyles, RootState
 
 ### Community 32 - "src/components/functionsPanel/FunctionPanel.tsx"
-Cohesion: 0.26
-Nodes (7): FunctionPanel(), PanelProps, useStyles, FunctionPanel(), PanelProps, useStyles, FunctionsSVG()
+Cohesion: 0.39
+Nodes (4): FunctionPanel(), PanelProps, useStyles, FunctionsSVG()
 
 ### Community 33 - "src/core/state/DataMapSlice.ts"
-Cohesion: 0.09
-Nodes (36): UnboundedInput, ComponentState, dataMapSlice, DataMapState, DeleteConnectionAction, deleteConnectionFromConnections(), deleteNodeFromConnections(), deleteParentRepeatingConnections() (+28 more)
+Cohesion: 0.10
+Nodes (24): ComponentState, dataMapSlice, DataMapState, DeleteConnectionAction, deleteNodeFromConnections(), doDataMapOperation(), Draft2, emptyPristineState (+16 more)
 
 ### Community 34 - "src/components/functionConfigurationMenu/inputTab/inputTab.tsx"
 Cohesion: 0.14
-Nodes (26): InputDropdown(), InputDropdownProps, InputOptionProps, useStyles, InputCustomInfoLabel(), CommonProps, CustomListItem(), CustomListItemProps (+18 more)
+Nodes (15): InputCustomInfoLabel(), CommonProps, CustomListItem(), CustomListItemProps, InputList(), InputListProps, InputListWrapper, TemplateItemProps (+7 more)
 
-### Community 35 - "src/core/state/Store.ts"
-Cohesion: 0.08
-Nodes (22): reactPlugin, DataMapDataProviderProps, DataMapperDesignerContext, DataMapperWrappedContext, ScrollLocation, ScrollProps, DataMapperDesignerProvider(), DataMapperDesignerProviderProps (+14 more)
-
-### Community 36 - "Icon.Utils.tsx"
-Cohesion: 0.18
-Nodes (7): CollectionRegular, StringCategory20Regular, CollectionRegular, StringCategory20Regular, iconBaseUrl, iconSize, mapCheckerIconStyle
-
-### Community 37 - "FunctionData"
+### Community 35 - "DataMapperDesignerProvider.tsx"
 Cohesion: 0.17
-Nodes (15): getConnectionForAnyKey(), hasExpectedConnection(), ConnectionDictionary, CustomValueConnection, EmptyConnection, NodeConnection, FunctionData, functionMock (+7 more)
+Nodes (7): reactPlugin, DataMapperDesignerContext, DataMapperDesignerProvider(), DataMapperDesignerProviderProps, reactPlugin, getCustomizedTheme(), store
 
-### Community 44 - "DataMapperDesigner.tsx"
-Cohesion: 0.11
-Nodes (11): IDataMapperFileService, InitDataMapperFileService(), SchemaFile, IDataMapperFileService, InitDataMapperFileService(), SchemaFile, DataMapperDesigner(), DataMapperDesignerProps (+3 more)
+### Community 37 - "src/mapHandling/__test__/MapDefinitionSerializer.spec.ts"
+Cohesion: 0.07
+Nodes (9): getConnectionForAnyKey(), hasExpectedConnection(), isEqualToCustomValue(), directAccessPseudoFunction, directAccessPseudoFunctionKey, ifPseudoFunctionKey, indexPseudoFunctionKey, fixMapDefinitionCustomValues() (+1 more)
 
-### Community 45 - "Connection.Utils.ts"
-Cohesion: 0.15
-Nodes (22): SetConnectionInputAction, InputConnection, FunctionCategory, SetConnectionInputAction, mockBoundedFunctionInputs, parentManyToOneTargetNode, parentTargetNode, areAllFunctionInputsFilled() (+14 more)
+### Community 40 - "DataMapDataProvider.tsx"
+Cohesion: 0.12
+Nodes (4): DataMapDataProviderProps, appSlice, AppState, initialState
+
+### Community 45 - "isSchemaNodeExtended"
+Cohesion: 0.25
+Nodes (16): getInputTypeFromNode(), deleteConnectionFromConnections(), deleteParentRepeatingConnections(), getInputTypeFromNode(), addLoopingForToNewPathItems(), collectSourceNodeIdsForConnectionChain(), connectionDoesExist(), createNewEmptyConnection() (+8 more)
 
 ### Community 46 - "src/components/canvas/ReactFlow.tsx"
-Cohesion: 0.12
-Nodes (21): EdgePopOver(), EdgePopOverProps, DMReactFlowProps, edgeTypes, nodeTypes, NOTE: Putting this useEffect here for vis next to onSave, ReactFlowWrapper(), reactFlowStyle (+13 more)
+Cohesion: 0.14
+Nodes (11): EdgePopOver(), EdgePopOverProps, DMReactFlowProps, edgeTypes, nodeTypes, ReactFlowWrapper(), reactFlowStyle, useStyles (+3 more)
 
 ### Community 47 - "src/images/FunctionIcons/DataType16Icons.tsx"
 Cohesion: 0.08
@@ -282,91 +285,127 @@ Nodes (12): Any16Filled, Any16Regular, Array16Filled, Array16Regular, Binary16Fi
 
 ### Community 48 - "src/images/FunctionIcons/DataType24Icons.tsx"
 Cohesion: 0.08
-Nodes (12): Any24Filled, Any24Regular, Array24Filled, Array24Regular, Binary24Filled, Binary24Regular, Decimal24Filled, Decimal24Regular (+4 more)
+Nodes (11): Any24Filled, Any24Regular, Array24Filled, Array24Regular, Binary24Filled, Binary24Regular, Decimal24Filled, Decimal24Regular (+3 more)
 
-### Community 49 - "applyConnectionValue"
-Cohesion: 0.21
-Nodes (18): reservedMapDefinitionKeys, addConnection(), convertToArray(), generateMapDefinitionHeader(), createSchemaToSchemaNodeConnection(), isEqualToCustomValue(), directAccessPseudoFunction, ifPseudoFunction (+10 more)
+### Community 49 - "Connection.Utils.ts"
+Cohesion: 0.08
+Nodes (37): addConnection(), DataMapOperationState, FailedMapDefinition, createSchemaToSchemaNodeConnection(), Connection, ConnectionDictionary, CustomValueConnection, EmptyConnection (+29 more)
 
-### Community 50 - "src/components/schema/SchemaPanel.tsx"
-Cohesion: 0.19
-Nodes (16): FileSelectorOption, SchemaFileSelector(), U, useStyles, ConfigPanelProps, schemaFileQuerySettings, SchemaPanel(), SchemaPanelBody() (+8 more)
+### Community 50 - "src/components/schema/SchemaPanelBody.tsx"
+Cohesion: 0.29
+Nodes (6): FileSelectorOption, SchemaFileSelector(), U, useStyles, SchemaPanelBodyProps, DataMapperFileService()
 
-### Community 51 - "src/components/schema/useSchema.ts"
-Cohesion: 0.23
-Nodes (16): SchemaTree(), SchemaTreeProps, SchemaTreeNode(), SchemaTreeNodeProps, TypeAnnotation(), SchemaTreeNodeHandle(), SchemaTreeNodeHandleProps, useHandleStyles (+8 more)
+### Community 51 - "src/components/schema/tree/SchemaTreeNode.tsx"
+Cohesion: 0.16
+Nodes (15): SchemaPanelBody(), SchemaTree(), SchemaTreeProps, SchemaTreeNode(), SchemaTreeNodeProps, TypeAnnotation(), SchemaTreeNodeHandle(), SchemaTreeNodeHandleProps (+7 more)
 
 ### Community 52 - "TrieTree"
+Cohesion: 0.22
+Nodes (4): TrieTree, TrieTreeNode, AppState, useSearch()
+
+### Community 53 - "FunctionData"
+Cohesion: 0.08
+Nodes (36): InputDropdownProps, FunctionIconProps, functionCategoryItemKeyPrefix, FunctionDataTreeItem, FunctionList(), FunctionListProps, fuseFunctionSearchOptions, loopFuseFunctionSearchOptions (+28 more)
+
+### Community 54 - "ref_fluentui_react_components"
+Cohesion: 0.18
+Nodes (12): CodeViewPanel(), CodeViewPanelProps, CodeViewPanelBody(), useStyles, Panel(), PanelProps, PanelXButton(), PanelXButtonProps (+4 more)
+
+### Community 55 - "components/common/selector/__test__/FileSelector.spec.tsx"
 Cohesion: 0.20
-Nodes (3): TrieTree, TrieTreeNode, AppState
+Nodes (8): IDataMapperFileService, InitDataMapperFileService(), SchemaFile, InputListWrapper, FileSelectorProps, MockFileService, renderWithRedux(), DataMapperDesignerProps
 
-### Community 53 - "src/components/functionList/FunctionList.tsx"
-Cohesion: 0.21
-Nodes (15): functionCategoryItemKeyPrefix, FunctionDataTreeItem, FunctionList(), FunctionListProps, fuseFunctionSearchOptions, loopFuseFunctionSearchOptions, NOTE: Explicitly use this instead of isAddingInlineFunction to track…, FunctionListHeader() (+7 more)
+### Community 56 - "src/components/functionConfigurationMenu/functionConfigurationPopover.tsx"
+Cohesion: 0.42
+Nodes (7): DetailsTabContents(), FunctionConfigurationPopover(), FunctionConfigurationPopoverProps, TabTypes, OutputTabContents(), useStyles, isFileDropdownFunction()
 
-### Community 54 - "RootState"
-Cohesion: 0.21
-Nodes (11): CodeViewPanel(), CodeViewPanelProps, CodeViewPanelBody(), CodeViewPanelBodyProps, useStyles, Panel(), PanelProps, PanelXButton() (+3 more)
+### Community 57 - "ext_logic_apps_shared_src_index_ts"
+Cohesion: 0.05
+Nodes (30): generateDataMapXslt(), testDataMap(), getFunctions(), getSelectedSchema(), DataMapperApiService, DataMapperApiServiceOptions, DmErrorResponse, DataMapperApiServiceInstance() (+22 more)
 
-### Community 55 - "core/state/PanelSlice.ts"
-Cohesion: 0.16
-Nodes (13): TestMapResponse, InputListWrapper, CodeViewState, ConfigPanelView, FunctionPanelState, initialState, MapCheckPanelState, MapCheckTabType (+5 more)
+### Community 58 - "src/core/state/ModalSlice.ts"
+Cohesion: 0.33
+Nodes (4): initialState, modalSlice, ModalState, WarningModalState
 
-### Community 56 - "isEmptyConnection"
-Cohesion: 0.26
-Nodes (12): DetailsTabContents(), FunctionConfigurationPopover(), FunctionConfigurationPopoverProps, TabTypes, OutputTabContents(), validateAndCreateConnectionOutput(), useStyles, validateAndCreateConnectionInput() (+4 more)
+### Community 59 - "DataMapperDesigner.tsx"
+Cohesion: 0.17
+Nodes (7): DataMapperWrappedContext, ScrollLocation, ScrollProps, DataMapperDesigner(), DialogView(), useStaticStyles, useStyles
 
-### Community 57 - "src/core/services/dataMapperApiService/index.ts"
+### Community 60 - "core/index.ts"
+Cohesion: 0.30
+Nodes (5): DataMapperApiServiceInstance(), generateDataMapXslt(), testDataMap(), getFunctions(), getSelectedSchema()
+
+### Community 61 - "src/components/commandBar/EditorCommandBar.tsx"
 Cohesion: 0.22
-Nodes (10): DataMapperApiServiceOptions, DmErrorResponse, NOTE: From BPM repo, looks like two schema files with the same name will prefer…, dataMapperApiVersions, defaultDataMapperApiServiceOptions, GenerateXsltResponse, InitDataMapperApiService(), exampleTree (+2 more)
-
-### Community 58 - "src/components/commandBar/EditorCommandBar.tsx"
-Cohesion: 0.22
-Nodes (9): EditorCommandBar(), EditorCommandBarProps, useStyles, initialState, modalSlice, ModalState, NOTE: Currently, modal is just used for discard data map changes warning, WarningModalState (+1 more)
-
-### Community 59 - "src/core/state/PanelSlice.ts"
-Cohesion: 0.21
-Nodes (11): TestMapResponse, CodeViewState, ConfigPanelView, FunctionPanelState, initialState, MapCheckPanelState, MapCheckTabType, panelSlice (+3 more)
+Nodes (3): EditorCommandBar(), EditorCommandBarProps, useStyles
 
 ### Community 62 - "components/commandBar/EditorCommandBar.tsx"
-Cohesion: 0.21
-Nodes (9): EditorCommandBar(), EditorCommandBarProps, useStyles, MetaMapDefinition, initialState, modalSlice, ModalState, WarningModalState (+1 more)
+Cohesion: 0.24
+Nodes (8): EditorCommandBar(), EditorCommandBarProps, useStyles, MetaMapDefinition, initialState, modalSlice, ModalState, WarningModalState
 
-### Community 63 - "src/components/test/TestPanel.tsx"
-Cohesion: 0.32
-Nodes (8): useStyles, TestPanel(), TestPanelProps, TestPanelBody(), TestPanelBodyProps, generateDataMapXslt(), testDataMap(), DataMapperApiServiceInstance()
+### Community 63 - "ref_react"
+Cohesion: 0.12
+Nodes (6): CodeViewPanelBodyProps, useStyles, TestPanel(), TestPanelProps, TestPanelBody(), TestPanelBodyProps
 
 ### Community 64 - "src/components/common/reactflow/FunctionNode.tsx"
-Cohesion: 0.31
-Nodes (8): CanvasNode(), CanvasNodeProps, CardProps, FunctionCardProps, FunctionNode(), useStyles, useHoverFunctionNode(), useSelectedNode()
+Cohesion: 0.20
+Nodes (11): CanvasNode(), CanvasNodeProps, CardProps, FunctionCardProps, FunctionNode(), useStyles, FunctionIcon(), useHoverFunctionNode() (+3 more)
 
 ### Community 65 - "src/components/common/selector/__test__/FileSelector.spec.tsx"
-Cohesion: 0.31
+Cohesion: 0.18
 Nodes (6): FileDropdownTree(), FileDropdownTreeProps, MockFileService, FileSelectorProps, MockFileService, useStyles
 
-### Community 67 - "MapDefinition.Utils.ts"
-Cohesion: 0.67
-Nodes (3): fixMapDefinitionCustomValues(), loadMapDefinition(), TODO: Handle arrays better, currently fine for XML, but this will need to be…
+### Community 66 - "src/core/state/FunctionSlice.ts"
+Cohesion: 0.22
+Nodes (6): functionSlice, FunctionState, initialFunctionState, initialSchemaState, schemaSlice, SchemaState
+
+### Community 67 - "MapMetadataSerializer.ts"
+Cohesion: 0.40
+Nodes (5): convertConnectionShorthandToId(), generateFunctionConnectionMetadata(), generateMapMetadata(), assignFunctionNodePositionsFromMetadata(), assignFunctionNodePositionsFromMetadata()
+
+### Community 68 - "ref_xyflow_react"
+Cohesion: 0.24
+Nodes (6): SchemaPanelNode(), SchemaPanelNodeReactFlowDataProps, SchemaPanel(), NodeInfo(), NodeInfoProps, NodeInspector()
+
+### Community 69 - "src/core/state/ErrorsSlice.ts"
+Cohesion: 0.28
+Nodes (7): errorsSlice, ErrorsState, initialFunctionState, errorsSlice, ErrorsState, initialFunctionState, MapIssue
+
+### Community 70 - "getConnectedTargetSchemaNodes"
+Cohesion: 0.33
+Nodes (7): handleDirectAccessConnection(), handleDirectAccessConnection(), collectSourceNodesForConnectionChain(), collectTargetNodesForConnectionChain(), getConnectedSourceSchemaNodes(), getConnectedTargetSchemaNodes(), getFunctionConnectionUnits()
+
+### Community 71 - "ui/hooks/useAutoLayout.ts"
+Cohesion: 0.29
+Nodes (5): autoLayout(), Direction, elk, LayoutAlgorithm, LayoutOptions
+
+### Community 74 - "components/functionsPanel/FunctionPanel.tsx"
+Cohesion: 0.60
+Nodes (3): FunctionPanel(), PanelProps, useStyles
+
+### Community 75 - "core/state/AppSlice.ts"
+Cohesion: 0.50
+Nodes (3): appSlice, AppState, initialState
 
 ## Knowledge Gaps
 - **197 isolated node(s):** `cache`, `intl`, `EdgePopOverProps`, `DMReactFlowProps`, `nodeTypes` (+192 more)
-  These have ≤1 connection - possible missing edges or undocumented components.
-- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges. (Counts symbols only; 439 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `FunctionData` connect `FunctionData` to `MapDefinitionDeserializer`, `components/functionConfigurationMenu/inputTab/inputTab.tsx`, `core/state/Store.ts`, `Schema.Utils.ts`, `core/state/DataMapSlice.ts`, `DataMap.Utils.ts`, `MapChecker.Utils.ts`, `core/index.ts`, `Function.Utils.ts`, `components/functionList/FunctionList.tsx`, `MapDefinitionDeserializer.ts`, `components/common/reactflow/FunctionNode.tsx`, `ReactFlow.Util.ts`, `components/functionConfigurationMenu/functionConfigurationPopover.tsx`, `src/core/state/DataMapSlice.ts`, `src/components/functionConfigurationMenu/inputTab/inputTab.tsx`, `src/core/state/Store.ts`, `Connection.Utils.ts`, `applyConnectionValue`, `src/components/functionList/FunctionList.tsx`, `isEmptyConnection`, `src/components/common/reactflow/FunctionNode.tsx`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
-- **Why does `LogCategory` connect `core/index.ts` to `Icon.Utils.tsx`, `Schema.Utils.ts`, `Edge.Utils.ts`, `Function.Utils.ts`, `components/functionList/FunctionList.tsx`, `src/components/functionList/FunctionList.tsx`, `src/components/commandBar/EditorCommandBar.tsx`, `components/commandBar/EditorCommandBar.tsx`, `src/components/test/TestPanel.tsx`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
-- **Why does `MapDefinitionDeserializer` connect `MapDefinitionDeserializer` to `src/core/state/Store.ts`, `FunctionData`, `DataMap.Utils.ts`, `MapChecker.Utils.ts`, `MapDefinitionDeserializer.ts`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `FunctionData` connect `FunctionData` to `MapDefinitionDeserializer`, `components/functionConfigurationMenu/inputTab/inputTab.tsx`, `Schema.Utils.ts`, `core/state/DataMapSlice.ts`, `DataMap.Utils.ts`, `MapChecker.Utils.ts`, `Function.Utils.ts`, `src/core/state/__test__/DataMapSlice.spec.ts`, `src/components/functionConfigurationMenu/inputDropdown/InputDropdown.tsx`, `components/common/reactflow/FunctionNode.tsx`, `ReactFlow.Util.ts`, `models/index.ts`, `src/core/state/DataMapSlice.ts`, `src/components/functionConfigurationMenu/inputTab/inputTab.tsx`, `src/mapHandling/__test__/MapDefinitionSerializer.spec.ts`, `DataMapDataProvider.tsx`, `isSchemaNodeExtended`, `Connection.Utils.ts`, `src/components/functionConfigurationMenu/functionConfigurationPopover.tsx`, `ext_logic_apps_shared_src_index_ts`, `core/index.ts`, `src/components/common/reactflow/FunctionNode.tsx`, `src/core/state/FunctionSlice.ts`?**
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
 - **What connects `cache`, `intl`, `EdgePopOverProps` to the rest of the system?**
   _197 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `MapDefinitionDeserializer` be split into smaller, more focused modules?**
-  _Cohesion score 0.13363363363363365 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1282051282051282 - nodes in this community are weakly interconnected._
 - **Should `MapDefinitionSerializer.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.14623655913978495 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13118279569892474 - nodes in this community are weakly interconnected._
 - **Should `images/FunctionIcons/FunctionIcons.tsx` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
+- **Should `images/FunctionIcons/DataType16Icons.tsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
+- **Should `images/FunctionIcons/DataType24Icons.tsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.08 - nodes in this community are weakly interconnected._

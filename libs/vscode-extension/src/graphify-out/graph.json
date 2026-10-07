@@ -1,7 +1,10 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {},
+  "graph": {
+    "schema_version": 1,
+    "graphify_version": "0.9.80"
+  },
   "nodes": [
     {
       "id": "lib_models_artifact_artifacts",
@@ -465,7 +468,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": "httpclient",
       "source_file": "src/lib/services/httpClient.ts",
@@ -478,7 +481,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": "httpoptions",
       "source_file": "src/lib/services/httpClient.ts",
@@ -537,6 +540,19 @@
       "source_location": "L53"
     },
     {
+      "id": "lib_models_project_iprojectwizardcontext",
+      "label": "IProjectWizardContext",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "src/lib/models/project.ts",
+      "file_type": "code",
+      "norm_label": "iprojectwizardcontext",
+      "source_file": "src/lib/models/project.ts",
+      "source_location": "L64"
+    },
+    {
       "id": "lib_models_project_itargetdirectory",
       "label": "ITargetDirectory",
       "_callable": true,
@@ -548,6 +564,19 @@
       "norm_label": "itargetdirectory",
       "source_file": "src/lib/models/project.ts",
       "source_location": "L163"
+    },
+    {
+      "id": "lib_models_project_iwebviewprojectcontext",
+      "label": "IWebviewProjectContext",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "src/lib/models/project.ts",
+      "file_type": "code",
+      "norm_label": "iwebviewprojectcontext",
+      "source_file": "src/lib/models/project.ts",
+      "source_location": "L95"
     },
     {
       "id": "lib_models_project_openbehavior",
@@ -639,6 +668,45 @@
       "norm_label": "routenametype",
       "source_file": "src/lib/models/project.ts",
       "source_location": "L162"
+    },
+    {
+      "id": "lib_models_workflow_projectpackagetype",
+      "label": "ProjectPackageType",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "src/lib/models/project.ts",
+      "file_type": "code",
+      "norm_label": "projectpackagetype",
+      "source_file": "src/lib/models/workflow.ts",
+      "source_location": "L86"
+    },
+    {
+      "id": "lib_models_workflow_targetframework",
+      "label": "TargetFramework",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "src/lib/models/project.ts",
+      "file_type": "code",
+      "norm_label": "targetframework",
+      "source_file": "src/lib/models/workflow.ts",
+      "source_location": "L122"
+    },
+    {
+      "id": "lib_models_workflow_workflowtype",
+      "label": "WorkflowType",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "src/lib/models/project.ts",
+      "file_type": "code",
+      "norm_label": "workflowtype",
+      "source_file": "src/lib/models/workflow.ts",
+      "source_location": "L129"
     },
     {
       "id": "lib_models_functions_azurefunctionsversion",
@@ -966,71 +1034,6 @@
       "source_location": "L5"
     },
     {
-      "id": "lib_models_project_iprojectwizardcontext",
-      "label": "IProjectWizardContext",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "IProjectWizardContext",
-      "file_type": "code",
-      "norm_label": "iprojectwizardcontext",
-      "source_file": "src/lib/models/project.ts",
-      "source_location": "L64"
-    },
-    {
-      "id": "lib_models_project_iwebviewprojectcontext",
-      "label": "IWebviewProjectContext",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "IProjectWizardContext",
-      "file_type": "code",
-      "norm_label": "iwebviewprojectcontext",
-      "source_file": "src/lib/models/project.ts",
-      "source_location": "L95"
-    },
-    {
-      "id": "lib_models_workflow_projectpackagetype",
-      "label": "ProjectPackageType",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "IProjectWizardContext",
-      "file_type": "code",
-      "norm_label": "projectpackagetype",
-      "source_file": "src/lib/models/workflow.ts",
-      "source_location": "L86"
-    },
-    {
-      "id": "lib_models_workflow_targetframework",
-      "label": "TargetFramework",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "IProjectWizardContext",
-      "file_type": "code",
-      "norm_label": "targetframework",
-      "source_file": "src/lib/models/workflow.ts",
-      "source_location": "L122"
-    },
-    {
-      "id": "lib_models_workflow_workflowtype",
-      "label": "WorkflowType",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "IProjectWizardContext",
-      "file_type": "code",
-      "norm_label": "workflowtype",
-      "source_file": "src/lib/models/workflow.ts",
-      "source_location": "L129"
-    },
-    {
       "id": "lib_services_jwthelper_idecodedjwttoken",
       "label": "IDecodedJwtToken",
       "_callable": true,
@@ -1184,7 +1187,7 @@
       "file_type": "code",
       "norm_label": "iextensionsjson",
       "source_file": "src/lib/models/extensioncommand.ts",
-      "source_location": "L78"
+      "source_location": "L79"
     },
     {
       "id": "lib_models_hybridlogicapp_fileshare",
@@ -1530,7 +1533,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": "getextraheaders()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1542,7 +1545,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": ".constructor()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1554,7 +1557,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": ".delete()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1566,7 +1569,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": ".dispose()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1578,7 +1581,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": ".get()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1590,7 +1593,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": ".getrequesturl()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1602,7 +1605,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": ".patch()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1614,7 +1617,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": ".post()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1626,7 +1629,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": ".put()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1638,7 +1641,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": ".updateaccesstoken()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1650,7 +1653,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": "isarmresourceid()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1662,7 +1665,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": "issuccessresponse()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1674,7 +1677,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": "isurl()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1686,7 +1689,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": "parseresponse()",
       "source_file": "src/lib/services/httpClient.ts",
@@ -1729,18 +1732,6 @@
       "source_location": "L57"
     },
     {
-      "id": "lib_models_project_iprojecttreeitem_getversion",
-      "label": ".getVersion()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "src/lib/models/host.ts",
-      "file_type": "code",
-      "norm_label": ".getversion()",
-      "source_file": "src/lib/models/project.ts",
-      "source_location": "L59"
-    },
-    {
       "id": "lib_models_project_iprojecttreeitem_setapplicationsetting",
       "label": ".setApplicationSetting()",
       "_callable": true,
@@ -1751,6 +1742,18 @@
       "norm_label": ".setapplicationsetting()",
       "source_file": "src/lib/models/project.ts",
       "source_location": "L61"
+    },
+    {
+      "id": "lib_models_project_iprojecttreeitem_getversion",
+      "label": ".getVersion()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "src/lib/models/context.ts",
+      "file_type": "code",
+      "norm_label": ".getversion()",
+      "source_file": "src/lib/models/project.ts",
+      "source_location": "L59"
     },
     {
       "id": "lib_helpers_authorization_getbasegraphapi",
@@ -1900,17 +1903,6 @@
       "norm_label": "azurefunctionsversion",
       "source_file": "lib/models/functions.ts",
       "source_location": "L16"
-    },
-    {
-      "id": "models_functions_funcversion",
-      "label": "FuncVersion",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "lib/models/project.ts",
-      "file_type": "code",
-      "norm_label": "funcversion",
-      "source_file": "lib/models/functions.ts",
-      "source_location": "L6"
     },
     {
       "id": "models_functions_icommandresult",
@@ -2298,6 +2290,17 @@
       "source_location": "L123"
     },
     {
+      "id": "models_workflow_workflowprojecttype",
+      "label": "WorkflowProjectType",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lib/models/project.ts",
+      "file_type": "code",
+      "norm_label": "workflowprojecttype",
+      "source_file": "lib/models/workflow.ts",
+      "source_location": "L86"
+    },
+    {
       "id": "models_workflow_workflowtype",
       "label": "WorkflowType",
       "_origin": "ast",
@@ -2357,7 +2360,7 @@
       "label": "src/lib/services/httpClient.ts",
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": "src/lib/services/httpclient.ts",
       "source_file": "src/lib/services/httpClient.ts",
@@ -2368,7 +2371,7 @@
       "label": "src/lib/services/__test__/httpClient.spec.ts",
       "_origin": "ast",
       "community": 10,
-      "community_name": "HttpClient",
+      "community_name": "src/lib/services/httpClient.ts",
       "file_type": "code",
       "norm_label": "src/lib/services/__test__/httpclient.spec.ts",
       "source_file": "src/lib/services/__test__/httpClient.spec.ts",
@@ -2714,17 +2717,6 @@
       "norm_label": "workflowparameter",
       "source_file": "lib/models/workflow.ts",
       "source_location": "L59"
-    },
-    {
-      "id": "models_workflow_workflowprojecttype",
-      "label": "WorkflowProjectType",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "lib/models/workflow.ts",
-      "file_type": "code",
-      "norm_label": "workflowprojecttype",
-      "source_file": "lib/models/workflow.ts",
-      "source_location": "L86"
     },
     {
       "id": "models_bundlefeed",
@@ -3530,6 +3522,17 @@
       "source_location": "L15"
     },
     {
+      "id": "models_functions_funcversion",
+      "label": "FuncVersion",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/models/connection.ts",
+      "file_type": "code",
+      "norm_label": "funcversion",
+      "source_file": "lib/models/functions.ts",
+      "source_location": "L6"
+    },
+    {
       "id": "services_httpclient",
       "label": "lib/services/httpClient.ts",
       "_origin": "ast",
@@ -4078,6 +4081,182 @@
       "norm_label": "src/lib/models/templates/iworkflowtemplate.ts",
       "source_file": "src/lib/models/templates/IWorkflowTemplate.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "libs_logic_apps_shared_src_index_logicappsv2",
+      "label": "libs_logic_apps_shared_src_index_logicappsv2",
+      "community": 1,
+      "community_name": "src/lib/models/connection.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "libs_logic_apps_shared_src_index_logicappsv2",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ext_logic_apps_shared_src_index_ts",
+      "label": "ext_logic_apps_shared_src_index_ts",
+      "community": 10,
+      "community_name": "src/lib/services/httpClient.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ext_logic_apps_shared_src_index_ts",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "libs_logic_apps_shared_src_index_http_methods",
+      "label": "libs_logic_apps_shared_src_index_http_methods",
+      "community": 10,
+      "community_name": "src/lib/services/httpClient.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "libs_logic_apps_shared_src_index_http_methods",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "libs_logic_apps_shared_src_index_httprequestoptions",
+      "label": "libs_logic_apps_shared_src_index_httprequestoptions",
+      "community": 10,
+      "community_name": "src/lib/services/httpClient.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "libs_logic_apps_shared_src_index_httprequestoptions",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "libs_logic_apps_shared_src_index_ihttpclient",
+      "label": "libs_logic_apps_shared_src_index_ihttpclient",
+      "community": 10,
+      "community_name": "src/lib/services/httpClient.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "libs_logic_apps_shared_src_index_ihttpclient",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_axios",
+      "label": "ref_axios",
+      "community": 10,
+      "community_name": "src/lib/services/httpClient.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_axios",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "lib_models_templates_index_iworkflowtemplate",
+      "label": "lib_models_templates_index_iworkflowtemplate",
+      "community": 12,
+      "community_name": "src/lib/models/functions.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "lib_models_templates_index_iworkflowtemplate",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_azure_arm_appcontainers",
+      "label": "ref_azure_arm_appcontainers",
+      "community": 14,
+      "community_name": "src/lib/models/context.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_azure_arm_appcontainers",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_microsoft_vscode_azext_azureappservice",
+      "label": "ref_microsoft_vscode_azext_azureappservice",
+      "community": 14,
+      "community_name": "src/lib/models/context.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_microsoft_vscode_azext_azureappservice",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_microsoft_vscode_azext_utils",
+      "label": "ref_microsoft_vscode_azext_utils",
+      "community": 14,
+      "community_name": "src/lib/models/context.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_microsoft_vscode_azext_utils",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "ref_vitest",
+      "community": 7,
+      "community_name": "src/index.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_vitest",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "libs_logic_apps_shared_src_index_ifilesystreeitem",
+      "label": "libs_logic_apps_shared_src_index_ifilesystreeitem",
+      "community": 8,
+      "community_name": "src/lib/models/index.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "libs_logic_apps_shared_src_index_ifilesystreeitem",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "libs_logic_apps_shared_src_index_mapdefinitionentry",
+      "label": "libs_logic_apps_shared_src_index_mapdefinitionentry",
+      "community": 8,
+      "community_name": "src/lib/models/index.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "libs_logic_apps_shared_src_index_mapdefinitionentry",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "libs_logic_apps_shared_src_index_mapmetadata",
+      "label": "libs_logic_apps_shared_src_index_mapmetadata",
+      "community": 8,
+      "community_name": "src/lib/models/index.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "libs_logic_apps_shared_src_index_mapmetadata",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "libs_logic_apps_shared_src_index_schematype",
+      "label": "libs_logic_apps_shared_src_index_schematype",
+      "community": 8,
+      "community_name": "src/lib/models/index.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "libs_logic_apps_shared_src_index_schematype",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_vscode",
+      "label": "ref_vscode",
+      "community": 8,
+      "community_name": "src/lib/models/index.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_vscode",
+      "source_file": "",
+      "type": "external"
     }
   ],
   "links": [
@@ -4271,6 +4450,18 @@
       "context": "call",
       "source_file": "src/lib/services/httpClient.ts",
       "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_services_jwthelper_jwttokenhelper_createinstance",
+      "target": "lib_services_jwthelper_jwttokenhelper",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/services/JwtHelper.ts",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -5834,6 +6025,54 @@
       "weight": 1.0
     },
     {
+      "source": "lib_models_datamapper",
+      "target": "libs_logic_apps_shared_src_index_ifilesystreeitem",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/dataMapper.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_datamapper",
+      "target": "libs_logic_apps_shared_src_index_mapdefinitionentry",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/dataMapper.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_datamapper",
+      "target": "libs_logic_apps_shared_src_index_mapmetadata",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/dataMapper.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_datamapper",
+      "target": "libs_logic_apps_shared_src_index_schematype",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/dataMapper.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "lib_models_functions",
       "target": "lib_models_language_projectlanguage",
       "relation": "imports",
@@ -5867,6 +6106,18 @@
       "context": "import",
       "source_file": "src/lib/models/functions.ts",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_functions",
+      "target": "lib_models_templates_index_iworkflowtemplate",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/functions.ts",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -6038,6 +6289,54 @@
       "weight": 1.0
     },
     {
+      "source": "lib_models_workflow",
+      "target": "libs_logic_apps_shared_src_index_logicappsv2",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/workflow.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_services_httpclient",
+      "target": "libs_logic_apps_shared_src_index_httprequestoptions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/services/httpClient.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_services_httpclient",
+      "target": "libs_logic_apps_shared_src_index_ihttpclient",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/services/httpClient.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_services_httpclient",
+      "target": "libs_logic_apps_shared_src_index_http_methods",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/services/httpClient.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "lib_services_test_httpclient_spec",
       "target": "lib_services_httpclient_httpclient",
       "relation": "imports",
@@ -6071,6 +6370,18 @@
       "context": "import",
       "source_file": "src/lib/services/__test__/httpClient.spec.ts",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_services_test_httpclient_spec",
+      "target": "libs_logic_apps_shared_src_index_httprequestoptions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/services/__test__/httpClient.spec.ts",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6374,6 +6685,18 @@
       "weight": 1.0
     },
     {
+      "source": "lib_helpers_test_authorization_spec",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/helpers/__test__/authorization.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "lib_models_bundlefeed",
       "target": "lib_models_templates_index",
       "relation": "imports_from",
@@ -6383,6 +6706,7 @@
       "context": "import",
       "source_file": "src/lib/models/bundleFeed.ts",
       "source_location": "L1",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6395,6 +6719,7 @@
       "context": "import",
       "source_file": "src/lib/models/connection.ts",
       "source_location": "L1",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6407,6 +6732,7 @@
       "context": "import",
       "source_file": "src/lib/models/connection.ts",
       "source_location": "L2",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6419,6 +6745,7 @@
       "context": "import",
       "source_file": "src/lib/models/connection.ts",
       "source_location": "L3",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6431,6 +6758,7 @@
       "context": "import",
       "source_file": "src/lib/models/context.ts",
       "source_location": "L1",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6443,6 +6771,46 @@
       "context": "import",
       "source_file": "src/lib/models/context.ts",
       "source_location": "L2",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_context",
+      "target": "ref_azure_arm_appcontainers",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/context.ts",
+      "source_location": "L3",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_context",
+      "target": "ref_microsoft_vscode_azext_azureappservice",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/context.ts",
+      "source_location": "L4",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_context",
+      "target": "ref_microsoft_vscode_azext_utils",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/context.ts",
+      "source_location": "L5",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6455,6 +6823,20 @@
       "context": "import",
       "source_file": "src/lib/models/dataMapper.ts",
       "source_location": "L1",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_datamapper",
+      "target": "ext_logic_apps_shared_src_index_ts",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/dataMapper.ts",
+      "source_location": "L2",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6467,6 +6849,7 @@
       "context": "import",
       "source_file": "src/lib/models/functions.ts",
       "source_location": "L1",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6479,6 +6862,7 @@
       "context": "import",
       "source_file": "src/lib/models/functions.ts",
       "source_location": "L2",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6491,6 +6875,33 @@
       "context": "import",
       "source_file": "src/lib/models/functions.ts",
       "source_location": "L3",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_functions",
+      "target": "ref_microsoft_vscode_azext_utils",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/functions.ts",
+      "source_location": "L4",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_launch",
+      "target": "ref_vscode",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/launch.ts",
+      "source_location": "L1",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6503,6 +6914,7 @@
       "context": "import",
       "source_file": "src/lib/models/project.ts",
       "source_location": "L1",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6515,6 +6927,7 @@
       "context": "import",
       "source_file": "src/lib/models/project.ts",
       "source_location": "L3",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6527,6 +6940,7 @@
       "context": "import",
       "source_file": "src/lib/models/project.ts",
       "source_location": "L4",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6539,6 +6953,46 @@
       "context": "import",
       "source_file": "src/lib/models/project.ts",
       "source_location": "L5",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_project",
+      "target": "ref_microsoft_vscode_azext_utils",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/project.ts",
+      "source_location": "L6",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_project",
+      "target": "ref_vscode",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/project.ts",
+      "source_location": "L7",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_tasks",
+      "target": "ref_vscode",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/tasks.ts",
+      "source_location": "L1",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6551,6 +7005,7 @@
       "context": "import",
       "source_file": "src/lib/models/templates/IWorkflowTemplate.ts",
       "source_location": "L5",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6563,6 +7018,7 @@
       "context": "import",
       "source_file": "src/lib/models/workflow.ts",
       "source_location": "L1",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -6574,6 +7030,68 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/lib/models/workflow.ts",
+      "source_location": "L2",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "lib_models_workflow",
+      "target": "ext_logic_apps_shared_src_index_ts",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/models/workflow.ts",
+      "source_location": "L3",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "lib_services_httpclient",
+      "target": "ext_logic_apps_shared_src_index_ts",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/services/httpClient.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_services_httpclient",
+      "target": "ref_axios",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/services/httpClient.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_services_test_httpclient_spec",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/services/__test__/httpClient.spec.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_services_test_httpclient_spec",
+      "target": "ref_axios",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/services/__test__/httpClient.spec.ts",
       "source_location": "L2",
       "weight": 1.0
     },
@@ -6587,6 +7105,19 @@
       "context": "import",
       "source_file": "src/lib/services/__test__/httpClient.spec.ts",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_services_test_httpclient_spec",
+      "target": "ext_logic_apps_shared_src_index_ts",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/services/__test__/httpClient.spec.ts",
+      "source_location": "L4",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -7299,7 +7830,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/models/extensioncommand.ts",
-      "source_location": "L76",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -7310,7 +7841,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/models/extensioncommand.ts",
-      "source_location": "L78",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -9790,17 +10321,6 @@
     },
     {
       "source": "lib_services_jwthelper_jwttokenhelper",
-      "target": "lib_services_jwthelper_jwttokenhelper_createinstance",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/services/JwtHelper.ts",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "lib_services_jwthelper_jwttokenhelper",
       "target": "lib_services_jwthelper_jwttokenhelper_extractjwttokenpayload",
       "relation": "method",
       "_origin": "ast",
@@ -9977,5 +10497,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "5c7453c9cf90bde2ffb20e68fdfaf655a8db19b5"
+  "built_at_commit": "04df5b5cff5238f7864713013f4eb3be67ab2049"
 }
